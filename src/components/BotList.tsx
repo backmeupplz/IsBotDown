@@ -4,7 +4,11 @@ import { classnames } from 'classnames/tailwind'
 import { getBots } from 'helpers/api'
 import Bot from 'models/Bot'
 import InfiniteScroll from 'react-infinite-scroll-component'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
 import usePagination from 'helpers/usePagination'
+
+dayjs.extend(relativeTime)
 
 const itemContainer = classnames('mt-2')
 const BotItem: FC<{ bot: Bot }> = ({ bot }) => {
@@ -12,6 +16,7 @@ const BotItem: FC<{ bot: Bot }> = ({ bot }) => {
     <div className={itemContainer}>
       {bot.isDown ? '❌' : '✅'}{' '}
       <Link to={`/${bot.username}`}>@{bot.username}</Link>
+      {!!bot.downSince && ` since ${dayjs(bot.downSince).fromNow()}`}
     </div>
   )
 }
