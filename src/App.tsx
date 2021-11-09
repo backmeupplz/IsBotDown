@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import Bot from 'pages/Bot'
 import Main from 'pages/Main'
 import NotFound from 'pages/NotFound'
