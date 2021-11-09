@@ -9,7 +9,7 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
 export default function Bot() {
-  const { username } = useParams()
+  const username = useParams().username?.replace('@', '').trim()
   const [bot, setBot] = useState<BotModel | null>(null)
   const [notFound, setNotFound] = useState(false)
   const navigate = useNavigate()
