@@ -25,6 +25,13 @@ export default function Main() {
         </ExternalLink>{' '}
         (and it has a public API).
       </BodyText>
+      <BodyText>
+        Official discussion group 👉{' '}
+        <ExternalLink to="https://t.me/borodutch_support">
+          @borodutch_support
+        </ExternalLink>
+        .
+      </BodyText>
       <FindBot />
       <BotList />
     </>
