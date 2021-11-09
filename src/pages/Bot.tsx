@@ -36,7 +36,16 @@ export default function Bot() {
     <>
       <Link to="/">back to main</Link>
       <Header>
-        <ExternalLink to={`https://t.me/${username}`}>@{username}</ExternalLink>
+        <ExternalLink to={`https://t.me/${
+            username.startsWith("@")
+              ? username.substr(1)
+              : username
+          }`}>{
+            username.startsWith("@")
+              ? username
+              : `@${username}`
+          }
+        </ExternalLink>
       </Header>
       {!bot && !notFound && <BodyText>🤔 loading...</BodyText>}
       {notFound && (
