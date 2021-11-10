@@ -14,6 +14,17 @@ export const Header: FC = ({ children }) => {
   return <p className={header}>{children}</p>
 }
 
+const subheader = classnames(
+  'text-indigo-900',
+  'font-bold',
+  'text-lg',
+  'md:text-xl',
+  'mt-6'
+)
+export const Subheader: FC = ({ children }) => {
+  return <p className={subheader}>{children}</p>
+}
+
 const body = classnames('text-indigo-800')
 export const BodyText: FC = ({ children }) => {
   return <p className={body}>{children}</p>
