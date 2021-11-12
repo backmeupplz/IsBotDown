@@ -52,6 +52,9 @@ export default function Bot() {
       }
       try {
         const data = await getAudience(username)
+        if (data.botsBaseResult && !data.botsBaseResult.users) {
+          data.botsBaseResult = undefined
+        }
         setBotAudienceInfo(data)
         if (!data.botsBaseResult) {
           setNoAudienceInfoBotBase(true)
