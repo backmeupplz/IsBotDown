@@ -204,10 +204,6 @@ export default function Bot() {
             Available groups: {botAudienceInfo.botsBaseResult.groups.available}
           </BodyText>
           <BodyText>
-            Remove from groups:{' '}
-            {botAudienceInfo.botsBaseResult.groups.not_availible}
-          </BodyText>
-          <BodyText>
             Total users in groups:{' '}
             {botAudienceInfo.botsBaseResult.groups.count_all_users}
           </BodyText>

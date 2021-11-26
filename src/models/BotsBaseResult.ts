@@ -14,7 +14,6 @@ export default interface BotsBaseResult {
   groups: {
     is_group: number
     available: number
-    not_availible: number
     count_all_users: number
   }
   status: 'success' | 'error'
